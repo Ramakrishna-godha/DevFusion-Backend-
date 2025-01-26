@@ -14,7 +14,9 @@ const userRouter = require("./router/user");
 // app.options("*", cors());
 
 const corsOptions = {
-  origin: process.env.CLIENT_URL || "http://localhost:5173", // Allow requests from this origin
+  // origin: process.env.CLIENT_URL || "http://localhost:5173", // Allow requests from this origin
+  origin:
+    process.env.FRONTEND_URL || "https://frontend-devfusion.onrender.com/", // Allow requests from this origin
 
   credentials: true, // Allow cookies if needed
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
