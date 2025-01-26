@@ -20,9 +20,6 @@ const corsOptions = {
   credentials: true, // Allow cookies if needed
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
 };
-app.get("/", (req, res) => {
-  res.send("Hello, DevFusion!");
-});
 
 app.use(cors(corsOptions));
 
