@@ -14,7 +14,7 @@ const userRouter = require("./router/user");
 // app.options("*", cors());
 
 const corsOptions = {
-  origin: "http://localhost:5173", // Allow requests from this origin
+  origin: process.env.CLIENT_URL || "http://localhost:5173", // Allow requests from this origin
 
   credentials: true, // Allow cookies if needed
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
@@ -33,8 +33,8 @@ app.use("/", userRouter);
 connectDB()
   .then(() => {
     console.log("Data base connection establishes....");
-    app.listen(3000, () => {
-      console.log("Server is Running");
+    app.listen(process.env.PORT || 3000, () => {
+      console.log(`Server is running on port ${process.env.PORT || 3000}`);
     });
   })
   .catch((err) => {
