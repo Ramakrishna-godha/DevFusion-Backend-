@@ -29,13 +29,13 @@ app.use("/", authRouter);
 app.use("/", profileRouter);
 app.use("/", requestRouter);
 app.use("/", userRouter);
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 connectDB()
   .then(() => {
     console.log("Data base connection establishes....");
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${process.env.PORT || 3000}`);
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
     });
   })
   .catch((err) => {
