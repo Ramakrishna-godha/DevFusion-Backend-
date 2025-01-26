@@ -1,0 +1,60 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build files
+dist/
+build/
+.vite/
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Debugger files
+*.pid
+*.seed
+
+# Coverage files
+coverage/
+
+# Docker-specific
+docker-compose.override.yml
+
+# Vite-specific files
+.vite/
+*.cache
+vite.config.ts
+vite.config.js
+
+# Miscellaneous
+*.bak
+*.swp
+
+# MongoDB dump files
+dump/
+
+# Temporary uploads (if applicable)
+uploads/
+temp/
