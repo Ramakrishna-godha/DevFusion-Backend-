@@ -21,6 +21,9 @@ const corsOptions = {
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
 };
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the backend API!");
+});
 app.use(cors(corsOptions));
 
 app.use(express.json());
@@ -31,9 +34,6 @@ app.use("/", profileRouter);
 app.use("/", requestRouter);
 app.use("/", userRouter);
 const port = process.env.PORT || 3000;
-app.get("/", (req, res) => {
-  res.send("Welcome to the backend API!");
-});
 
 connectDB()
   .then(() => {
