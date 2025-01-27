@@ -31,6 +31,9 @@ app.use("/", profileRouter);
 app.use("/", requestRouter);
 app.use("/", userRouter);
 const port = process.env.PORT || 3000;
+app.get("/", (req, res) => {
+  res.send("Welcome to the backend API!");
+});
 
 connectDB()
   .then(() => {
