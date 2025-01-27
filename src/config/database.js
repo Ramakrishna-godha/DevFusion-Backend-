@@ -8,11 +8,12 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 
-const dbURI = process.env.DB_CONNECTION_SECRET;
-
 const connectDB = async () => {
   try {
-    await mongoose.connect(dbURI);
+    await mongoose.connect(process.env.DB_CONNECTION_SECRET, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     console.log("MongoDB connected successfully!");
   } catch (error) {
     console.error("MongoDB connection error:", error);
